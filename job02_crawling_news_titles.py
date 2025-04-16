@@ -1,9 +1,13 @@
+#파일 명:
+#naver_headline_news_Politics_{}.csv
+#('Politics', 'Economic', 'social', 'Culture', 'World', 'IT')
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+
 
 options = ChromeOptions()
 
@@ -30,14 +34,24 @@ for i in range(1, 6): # 5회
         except:
             print('error', i, j)
 
-'//*[@id="_SECTION_HEADLINE_LIST_adhba"]/li[1]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[1]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[2]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[4]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[5]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[6]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[2]/ul/li[1]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[2]/ul/li[6]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[3]/div/a'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[4]/ul/li[1]/div/div/div[2]/a/strong'
-'//*[@id="newsct"]/div[4]/div/div[1]/div[6]/ul/li[4]/div/div/div[2]/a/strong'
+
+
+
+
+
+
+
+
+
+
+# '//*[@id="_SECTION_HEADLINE_LIST_adhba"]/li[1]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[1]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[2]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[4]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[5]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[1]/ul/li[6]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[2]/ul/li[1]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[2]/ul/li[6]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[3]/div/a'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[4]/ul/li[1]/div/div/div[2]/a/strong'
+# '//*[@id="newsct"]/div[4]/div/div[1]/div[6]/ul/li[4]/div/div/div[2]/a/strong'
