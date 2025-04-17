@@ -92,3 +92,4 @@ np.save('./crawling_data/title_x_train_wordszie{}'.format(wordsize),x_train)
 np.save('./crawling_data/title_x_test_wordszie{}'.format(wordsize),x_test)
 np.save('./crawling_data/title_y_train_wordszie{}'.format(wordsize),y_train)
 np.save('./crawling_data/title_y_test_wordszie{}'.format(wordsize),y_test)
+
