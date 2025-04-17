@@ -28,8 +28,6 @@ for category_name, category_code in category_mapping.items():
     options = ChromeOptions()
     options.add_argument('lang=ko_KR')
     options.add_argument('--headless')  # 브라우저 창 숨기기 (속도 향상)
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
     
     service = ChromeService(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
@@ -54,7 +52,7 @@ for category_name, category_code in category_mapping.items():
         try:
             # 더보기 버튼이 보일 때까지 스크롤
             button = driver.find_element(By.XPATH, button_xpath)
-            driver.execute_script("arguments[0].scrollIntoView();", button)
+            # driver.execute_script("arguments[0].scrollIntoView();", button)
             time.sleep(1)
             button.click()
             print(f"더보기 {i+1}/{more_clicks}회 클릭 성공")
