@@ -34,14 +34,14 @@ for tag in title_tags:
 # Selenium으로 추가 헤드라인 수집
 driver.get(url)
 button_xpath = '//*[@id="newsct"]/div[4]/div/div[2]'
-for i in range(30): #더보기 횟수
+for i in range(50): #더보기 횟수
     time.sleep(0.5)
     try:
         driver.find_element(By.XPATH, button_xpath).click()
     except:
         print('error {category}')
 
-for j in range(1, 200):
+for j in range(1, 300):  # 299회
     for k in range(1, 7):
         time.sleep(0.5)
         title_path = '//*[@id="newsct"]/div[4]/div/div[1]/div[{}]/ul/li[{}]/div/div/div[2]/a/strong'.format(j, k)

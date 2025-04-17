@@ -11,11 +11,11 @@ import time
 
 # 카테고리
 category_mapping  = {
-#     'Politics': '100',
-#   'Economic': '101', #button_xpath = '//*[@id="newsct"]/div[5]/div/div[2]'
-#     'Social': '102',
-#'Culture': '103',
-#    'World': '104',
+    # 'Politics': '100',
+    # 'Economic': '101', #button_xpath = '//*[@id="newsct"]/div[5]/div/div[2]'
+    # 'Social': '102',
+    # 'Culture': '103',
+    # 'World': '104',
     'IT': '105'
 }
 
@@ -55,7 +55,7 @@ for category_name, category_code in category_mapping.items():
             # 더보기 버튼이 보일 때까지 스크롤
             button = driver.find_element(By.XPATH, button_xpath)
             driver.execute_script("arguments[0].scrollIntoView();", button)
-            time.sleep(0.5)
+            time.sleep(1)
             button.click()
             print(f"더보기 {i+1}/{more_clicks}회 클릭 성공")
             consecutive_errors = 0  # 성공했으므로 에러 카운트 초기화
@@ -89,20 +89,20 @@ for category_name, category_code in category_mapping.items():
         
         for k in range(1, 7):
             try:
-                # 명시적인 XPath 사용
+                # XPath 사용
                 title_path = f'//*[@id="newsct"]/div[4]/div/div[1]/div[{j}]/ul/li[{k}]/div/div/div[2]/a/strong'
                 title = driver.find_element(By.XPATH, title_path).text
                 if title.strip():  # 빈 문자열이 아닌 경우에만 추가
                     titles.append(title)
                     div_success = True
                     
-                    # 진행 상황 모니터링 (50개마다 출력)
+                    # 50개마다 출력
                     if len(titles) % 50 == 0:
                         print(f"현재 {len(titles)}개 제목 수집됨")
             except:
                 pass
         
-        # 현재 div에서 아무것도 찾지 못했으면 5번 더 시도하고 종료
+        # 아무것도 찾지 못했으면 5번 더 시도하고 종료
         if not div_success:
             # 마지막으로 발견된 div에서 5개 더 확인 후 종료
             empty_div_count = 1
@@ -132,7 +132,7 @@ for category_name, category_code in category_mapping.items():
     print(f"{category_name} 실행 시간: {end - start:.2f}초")
     print(f"===== {category_name} 카테고리 크롤링 완료 =====\n")
     
-    # 카테고리 간 잠시 대기 (서버 부하 방지)
+    # 카테고리 간 잠시 대기
     time.sleep(5)
 
 print("모든 카테고리 크롤링 완료!")
