@@ -12,4 +12,4 @@ for path in data_path:
     df = pd.concat([df, df_section], ignore_index=True)
 df.info()
 print(df.head())
-df.to_csv('./crawling_data/news_titles.csv')
+df.to_csv('./crawling_data/news_titles.csv', index=False)
