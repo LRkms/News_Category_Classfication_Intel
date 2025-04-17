@@ -13,3 +13,4 @@ for path in data_path:
 df.info()
 print(df.head())
 df.to_csv('./crawling_data/news_titles.csv', index=False)
+
