@@ -4,7 +4,7 @@ import re
 import pandas as pd
 import datetime
 
-category = ['Politics', 'Economic', 'social', 'Culture', 'World', 'IT']
+category = ['Politiccs', 'Economic', 'Social', 'Culture', 'World', 'IT']
 df_titles = pd.DataFrame()
 for i in range(6):
     url = 'https://news.naver.com/section/10{}'.format(i)
