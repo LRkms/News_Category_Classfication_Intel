@@ -1,7 +1,7 @@
 import pandas as pd
 import glob
 
-data_dir = './crawling_data/'
+data_dir = '../crawling_data/'
 df = pd.DataFrame()
 data_path = glob.glob(data_dir + '*.*')
 

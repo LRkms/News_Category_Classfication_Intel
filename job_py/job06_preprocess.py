@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import re
 
 
-df = pd.read_csv('./crawling_data/news_titles.csv')
+df = pd.read_csv('../crawling_data/news_titles.csv')
 df.info()
 # print(df.head(30))
 # print(df.category.value_counts())
@@ -36,7 +36,7 @@ labeled_y = encoder.fit_transform(y)
 print(labeled_y[:5])
 label = encoder.classes_
 print(label)
-with open('./models/encoder.pickle', 'wb') as f: #피클은 데이터가 뭐가 됐든 숫자로 저장
+with open('../models/encoder.pickle', 'wb') as f: #피클은 데이터가 뭐가 됐든 숫자로 저장
     pickle.dump(encoder, f)
 
 onehot_y = to_categorical(labeled_y)
